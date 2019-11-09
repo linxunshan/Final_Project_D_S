@@ -51,9 +51,8 @@ int main(int argc, const char * argv[]) {
     
 //    student CCNY_1; // we are initialzing/creating the object
 //    string str1 = "jason";
-//    string str2 = "jcalle000@citymail.cuny.edu";
-//    int z= 23285415;
-//
+//    string str2 =
+    //    int z=
 //    CCNY_1.name=str1;
 //    CCNY_1.email=str2;
 //    CCNY_1.ID=z;
