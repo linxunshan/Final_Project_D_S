@@ -15,12 +15,14 @@ struct student
     string name;
     string email;
     int ID;
+    
+    void print();
 };
 
-//void student::print()
-//{
-//
-//}
+void student::print()
+{
+    cout << "Print" << endl;
+}
 //
 //int student::check_position()
 //{
@@ -80,6 +82,8 @@ int main(int argc, const char * argv[]) {
            
            cout << "this is the information you said" << endl;
            cout << one.name << "\t" << one. email << "\t" << one. ID << endl;
+           
+           one.print();
 
        }
     
