@@ -17,32 +17,32 @@ struct student
     int ID;
 };
 
-void student::print()
-{
-
-}
-
-int student::check_position()
-{
-
-}
-
-struct admin
-{
-    string name;
-    string email;
-    int ID;
-};
-
-void admin::cancel_print_order(int ID)
-{
-
-}
-
-void admin::add_paper()
-{
-
-}
+//void student::print()
+//{
+//
+//}
+//
+//int student::check_position()
+//{
+//
+//}
+//
+//struct admin
+//{
+//    string name;
+//    string email;
+//    int ID;
+//};
+//
+//void admin::cancel_print_order(int ID)
+//{
+//
+//}
+//
+//void admin::add_paper()
+//{
+//
+//}
 
 
 
@@ -71,22 +71,16 @@ int main(int argc, const char * argv[]) {
     
     if(str== "student")
        {
-           student one;
+           struct student one;
+           cout << endl;
            
-           cout << "Enter your Name" << endl;
-           getline(cin,one.name);
+           cout << "Enter your Name" << "\t" << "Enter your Email" << "\t" << "Enter your student ID" << endl;
+           cin >> one.name >> one.email >> one.ID ;
+           cout << endl ;
+
            
-           cout << "Enter your Email" << endl;
-           getline(cin,one.email);
-           
-           
-           cout << "Enter your student ID" << endl;
-           cin >> one.ID;
-           
-           cout << "this is the information you said";
-           cout << one.name << endl;
-           cout << one. email << endl;
-           cout << one. ID << endl;
+           cout << "this is the information you said" << endl;
+           cout << one.name << "\t" << one. email << "\t" << one. ID << endl;
 
        }
     
