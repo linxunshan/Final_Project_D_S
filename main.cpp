@@ -23,7 +23,7 @@ struct student
     void print(int x,y);
 };
     struct student *front =NULL;
-	struct student *rear =NULL;
+    struct student *rear =NULL;
 void student::print(int x,int y)
 {
     struct student *temp = new struct student;
@@ -40,9 +40,9 @@ void student::print(int x,int y)
     
     
     if (y < totalpages){
-    pages -= y;
+    totalpages -= y;
     cout <<"remain pages: " << totalpages << endl;
-    cout << "Print" << endl;
+    cout << "Print" << y << "pages" << endl;
     }
     else {
         cout<< " Please ask admin for adding pages " << endl;
@@ -105,11 +105,6 @@ int main(int argc, const char * argv[]) {
     if(str == "student")
        {
            int x,y;
-           cout<< "Enter your student ID"<< endl;
-           cin>>x;
-           cout<< "Enter how many pages do you want to print"<< endl;
-           cin>>y;
-           print(x,y);
         
         
            struct student one;
@@ -123,7 +118,9 @@ int main(int argc, const char * argv[]) {
            cout << "this is the information you said" << endl;
            cout << one.name << "\t" << one. email << "\t" << one. ID << endl;
            
-           one.print();
+	   cin>>x>>y;
+	   cout<< endl;
+           one.print(x,y);
 
        }
     
