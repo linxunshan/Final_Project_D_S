@@ -15,14 +15,46 @@ struct student
     string name;
     string email;
     int ID;
+    int totalpages = 100;
+    int pages;
+    struct student *prev;
     
-    void print();
-};
 
-void student::print()
+    void print(int x,y);
+};
+    struct student *front =NULL;
+	struct student *rear =NULL;
+void student::print(int x,int y)
 {
+    struct student *temp = new struct student;
+    temp->ID = x;
+    temp->prev = NULL;
+    if (front == NULL){
+        fornt = temp;
+        rear = temp;
+    }
+    else {
+        temp->prev = rear;
+        rear = temp;
+    }
+    
+    
+    if (y < totalpages){
+    pages -= y;
+    cout <<"remain pages: " << totalpages << endl;
     cout << "Print" << endl;
+    }
+    else {
+        cout<< " Please ask admin for adding pages " << endl;
+    }
+    temp->pages = totalpages;
 }
+
+//void student::print()
+//{
+
+//
+//}
 //
 //int student::check_position()
 //{
@@ -70,8 +102,16 @@ int main(int argc, const char * argv[]) {
     
 
     
-    if(str== "student")
+    if(str == "student")
        {
+           int x,y;
+           cout<< "Enter your student ID"<< endl;
+           cin>>x;
+           cout<< "Enter how many pages do you want to print"<< endl;
+           cin>>y;
+           print(x,y);
+        
+        
            struct student one;
            cout << endl;
            
