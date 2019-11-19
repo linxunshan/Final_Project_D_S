@@ -17,16 +17,26 @@ struct student
     int ID;
     int totalpages = 100;
     int pages;
-    struct student *prev;
     
 
     void print(int x,y);
 };
-    struct student *front =NULL;
-	struct student *rear =NULL;
-void student::print(int x,int y)
+
+struct printer{
+    int ID;
+    int totalpages = 100;
+    int pages;
+    struct printer *prev;
+	
+};
+
+
+
+    struct printer *front =NULL;
+    struct printer *rear =NULL;
+void printer::enqueue(int x,int y)
 {
-    struct student *temp = new struct student;
+    struct printer *temp = new struct student;
     temp->ID = x;
     temp->prev = NULL;
     if (front == NULL){
@@ -37,18 +47,11 @@ void student::print(int x,int y)
         temp->prev = rear;
         rear = temp;
     }
-    
-    
-    if (y < totalpages){
-    pages -= y;
-    cout <<"remain pages: " << totalpages << endl;
-    cout << "Print" << endl;
-    }
-    else {
-        cout<< " Please ask admin for adding pages " << endl;
-    }
-    temp->pages = totalpages;
 }
+
+void printer::dequeue()
+{
+	
 
 //void student::print()
 //{
